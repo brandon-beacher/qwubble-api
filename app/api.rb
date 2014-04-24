@@ -3,5 +3,6 @@ module Qwubble
     prefix 'api'
     format :json
     mount ::Qwubble::Ping
+    mount ::Qwubble::Registrations
   end
 end
