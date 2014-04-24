@@ -3,6 +3,7 @@ ruby "2.1.1"
 
 gem "dotenv"
 gem "em-gcm", github: "SpotIM/em-gcm"
+gem "em-http-request"
 gem "goliath"
 gem "grape"
 
@@ -13,5 +14,4 @@ end
 group :test do
   gem "rspec"
   gem "rack-test"
-  gem "em-http-request"
 end
