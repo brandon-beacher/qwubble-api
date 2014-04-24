@@ -1,6 +1,7 @@
 source "http://rubygems.org"
 ruby "2.1.1"
 
+gem "em-gcm", github: "SpotIM/em-gcm"
 gem "goliath"
 gem "grape"
 

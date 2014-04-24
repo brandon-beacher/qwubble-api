@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/SpotIM/em-gcm.git
+  revision: 1458ffe7922b71b48387e1479da0d3b5fddd8c55
+  specs:
+    em-gcm (0.0.2)
+      eventmachine (~> 1.0.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -100,6 +107,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  em-gcm!
   em-http-request
   goliath
   grape
