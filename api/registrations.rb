@@ -6,7 +6,7 @@ module Qwubble
 
       desc "Register a device."
       params do
-        requires :registration_id, type: Integer, desc: "The device's registration id."
+        requires :registration_id, type: String, desc: "The device's registration id."
       end
       post do
         { registration_id: params[:registration_id] }
