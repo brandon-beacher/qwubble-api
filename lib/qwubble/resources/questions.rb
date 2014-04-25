@@ -12,10 +12,12 @@ module Qwubble
         end
         post do
           image_url = Qwubble::Searches::GoogleImageSearch.grab_random_image_url(params[:question])
-          Qwubble::Models::Question.create(
+          question = Qwubble::Models::Question.create(
             registration_id: params[:registration_id],
             question:        params[:question],
             image_url:       image_url)
+          Qwubble::Notifications::QuestionCreationNotification.new(question).notify
+          question
         end
 
       end
