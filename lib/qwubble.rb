@@ -12,8 +12,10 @@ DB = ::Sequel.connect(
 
 Bundler.require :default
 
+require "qwubble/models/question"
 require "qwubble/models/registration"
 require "qwubble/resources/ping"
+require "qwubble/resources/questions"
 require "qwubble/resources/registrations"
 require "qwubble/goliath"
 require "qwubble/grape"
