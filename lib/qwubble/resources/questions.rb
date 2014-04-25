@@ -11,9 +11,11 @@ module Qwubble
           requires :question, type: String, desc: "The user's question."
         end
         post do
+          image_url = Qwubble::Searches::GoogleImageSearch.grab_random_image_url(params[:question])
           Qwubble::Models::Question.create(
             registration_id: params[:registration_id],
-            question:        params[:question])
+            question:        params[:question],
+            image_url:       image_url)
         end
 
       end
