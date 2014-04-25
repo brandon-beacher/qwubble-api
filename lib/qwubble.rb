@@ -16,10 +16,13 @@ GCM = EM::GCM::Client.new(ENV["GCM_API_KEY"])
 
 Bundler.require :default
 
+require "qwubble/models/answer"
 require "qwubble/models/question"
 require "qwubble/models/registration"
 require "qwubble/notifications/notification"
+require "qwubble/notifications/answer_created_notification"
 require "qwubble/notifications/question_created_notification"
+require "qwubble/resources/answers"
 require "qwubble/resources/ping"
 require "qwubble/resources/questions"
 require "qwubble/resources/registrations"

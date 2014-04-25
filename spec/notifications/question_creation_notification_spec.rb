@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Qwubble::Notifications::QuestionCreationNotification do
-  it "notifies" do
+  it "notifies when a question is asked" do
     EM.synchrony do
       question = Qwubble::Models::Question.new(question: "Should I wear a chicken suit to work?")
       question_creation_notification = Qwubble::Notifications::QuestionCreationNotification.new(question)
