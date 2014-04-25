@@ -10,9 +10,8 @@ module Qwubble
           requires :registration_id, type: String, desc: "The device's registration id."
         end
         post do
-          registration = Qwubble::Models::Registration.create(
+          Qwubble::Models::Registration.create(
             registration_id: params[:registration_id])
-          registration.to_json
         end
 
       end

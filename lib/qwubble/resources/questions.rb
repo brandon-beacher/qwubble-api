@@ -11,10 +11,9 @@ module Qwubble
           requires :question, type: String, desc: "The user's question."
         end
         post do
-          question = Qwubble::Models::Question.create(
+          Qwubble::Models::Question.create(
             registration_id: params[:registration_id],
-            question: params[:question])
-          question.to_json
+            question:        params[:question])
         end
 
       end
