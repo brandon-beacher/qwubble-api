@@ -4,6 +4,7 @@ ruby "2.1.1"
 gem "dotenv"
 gem "em-gcm", github: "SpotIM/em-gcm"
 gem "em-http-request"
+gem "em-pg-sequel"
 gem "goliath"
 gem "grape"
 

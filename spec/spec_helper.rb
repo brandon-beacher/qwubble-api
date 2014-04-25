@@ -1,19 +1,20 @@
-require 'rubygems'
-
+ENV["DATABASE_URL"] ||= 'postgres://localhost/qwubble_test'
 ENV["RACK_ENV"] ||= 'test'
 
-require 'rack/test'
+require 'rubygems'
+require 'bundler/setup'
+require 'goliath/test_helper'
+require 'qwubble'
 
-require File.expand_path("../../config/environment", __FILE__)
+Bundler.require :default, :test
 
 RSpec.configure do |config|
   config.mock_with :rspec
   config.expect_with :rspec
 end
 
-require 'goliath/test_helper'
 RSpec.configure do |c|
   c.include Goliath::TestHelper, :example_group => {
-    :file_path => /spec\/api/
+    :file_path => /spec\/resources/
   }
 end
