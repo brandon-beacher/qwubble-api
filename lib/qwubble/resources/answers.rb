@@ -22,6 +22,14 @@ module Qwubble
           answer
         end
 
+        desc "Get the answers to a question."
+        params do
+          requires :question_id, type: Integer, desc: "The question."
+        end
+        get do
+          Qwubble::Models::Answer.where(question_id: params[:question_id])
+        end
+
       end
 
     end

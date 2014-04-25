@@ -2,6 +2,7 @@ module Qwubble
   class Grape < Grape::API
     prefix 'api'
     format :json
+    mount ::Qwubble::Resources::Answers
     mount ::Qwubble::Resources::Ping
     mount ::Qwubble::Resources::Questions
     mount ::Qwubble::Resources::Registrations
