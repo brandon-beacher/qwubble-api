@@ -7,6 +7,7 @@ require "goliath"
 require "grape"
 require "sequel"
 
+Sequel::Model.plugin :json_serializer
 DB = ::Sequel.connect(
   ENV["DATABASE_URL"],
   pool_class: :em_synchrony)
