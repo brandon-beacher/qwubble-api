@@ -18,7 +18,7 @@ module Qwubble
             question_id:     params[:question_id],
             answer:          params[:answer],
             image_url:       image_url)
-          Qwubble::Notifications::AnswerCreationNotification.new(answer).notify(answer.question.registration_id)
+          Qwubble::Notifications::AnswerCreationNotification.new(answer).notify([answer.question.registration_id])
           answer
         end
 
